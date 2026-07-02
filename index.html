@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terrenos y Ladrillos | Desarrollo Inmobiliario en Alianza con Propietarios</title>
+  <meta name="description" content="¿Tienes un terreno bien ubicado sin construir? Lo convertimos en tu mejor inversión: nosotros aportamos el 100% del capital, tú conservas tu propiedad. Transparencia y seguridad legal garantizadas.">
+  <meta name="keywords" content="desarrollo inmobiliario, venta de terrenos, asociación de terrenos, construcción de inmuebles, compra venta de inmuebles, inversión inmobiliaria, desarrollador inmobiliario Guadalajara">
+  <meta property="og:title" content="Terrenos y Ladrillos | Desarrollo Inmobiliario">
+  <meta property="og:description" content="Buscamos socios para desarrollos inmobiliarios. Invertimos el 100% del capital y maximizamos la utilidad de tu terreno.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader" aria-hidden="true">
+  <div class="ld-logo">
+    <img src="img/logo.png" alt="Terrenos y Ladrillos" class="ld-logo-img">
+  </div>
+  <div class="ld-progress">
+    <div class="ld-track"><div class="ld-fill"></div></div>
+    <p class="ld-note">Cargando</p>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav id="nav" role="navigation" aria-label="Menú principal">
+  <div class="nav-wrap">
+    <a href="#" class="logo" aria-label="Terrenos y Ladrillos">
+      <img src="img/logo.png" alt="Terrenos y Ladrillos" class="nav-logo-img">
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#about">Empresa</a></li>
+      <li><a href="#services">Servicios</a></li>
+      <li><a href="#products">Tipos de Terreno</a></li>
+      <li><a href="#why">Por qué Elegirnos</a></li>
+      <li><a href="#contact" class="nav-cta">Evalúa tu Terreno</a></li>
+    </ul>
+    <button class="hamburger" id="ham" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div id="mob" class="mob-menu" role="navigation" aria-label="Menú móvil">
+  <a href="#about">Empresa</a>
+  <a href="#services">Servicios</a>
+  <a href="#products">Tipos de Terreno</a>
+  <a href="#why">Por qué Elegirnos</a>
+  <a href="#contact">Evalúa tu Terreno</a>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section id="hero" aria-label="Encabezado principal">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-ov" aria-hidden="true"></div>
+  <canvas id="pcanvas" aria-hidden="true"></canvas>
+
+  <div class="hero-body">
+    <div class="wrap">
+      <p class="hero-eyebrow">Desarrollo Inmobiliario · Comercialización de Inmuebles</p>
+      <h1 class="hero-h1">
+        <span class="h1-line"><span class="h1-inner">Tu Terreno,</span></span>
+        <span class="h1-line"><span class="h1-inner">Nuestra Inversión:</span></span>
+        <span class="h1-line h1-accent"><span class="h1-inner"><span class="accent-cycle" id="accentCycle">Patrimonio</span></span></span>
+      </h1>
+      <p class="hero-p">
+        Nos asociamos con propietarios de terrenos bien ubicados para desarrollarlos, construirlos y comercializarlos. Nosotros ponemos el 100% de la inversión; tú conservas tu propiedad y compartes la utilidad.
+      </p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">
+          Quiero Desarrollar mi Terreno
+          <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#services" class="btn-secondary">Conoce Nuestros Servicios</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-stats" aria-label="Cifras clave">
+    <div class="wrap">
+      <div class="stats-row">
+        <div class="stat-col">
+          <span class="stat-val" data-hero-count="100" data-prefix="" data-suffix="%">0%</span>
+          <span class="stat-lbl">Inversión por nuestra cuenta</span>
+        </div>
+        <div class="stat-col">
+          <span class="stat-val" data-hero-count="0" data-prefix="" data-suffix="%">0%</span>
+          <span class="stat-lbl">Costo inicial para ti</span>
+        </div>
+        <div class="stat-col">
+          <span class="stat-val" data-hero-count="100" data-prefix="" data-suffix="%">0%</span>
+          <span class="stat-lbl">Transparencia legal</span>
+        </div>
+        <div class="stat-col">
+          <span class="stat-val" data-hero-count="3" data-prefix="" data-suffix="">0</span>
+          <span class="stat-lbl">Servicios integrales</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-deco" aria-hidden="true">
+    <div class="hero-orb hero-orb--1"></div>
+    <div class="hero-orb hero-orb--2"></div>
+    <div class="hero-beam"></div>
+  </div>
+  <div class="hero-scroll-cue" aria-hidden="true">
+    <svg width="22" height="34" viewBox="0 0 22 34" fill="none">
+      <rect x="1" y="1" width="20" height="32" rx="10" stroke="rgba(255,255,255,.25)" stroke-width="1.5"/>
+      <circle class="mouse-dot" cx="11" cy="9" r="3" fill="rgba(255,255,255,.55)"/>
+    </svg>
+    <span class="scroll-label">Scroll</span>
+  </div>
+  <div class="hero-badge" aria-hidden="true">
+    <span class="hb-dot"></span>
+    <span class="hb-text">Transparencia legal garantizada</span>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section id="trust" aria-label="Nuestro proceso">
+  <div class="wrap">
+    <div class="trust-row">
+      <p class="trust-label">Nuestro proceso</p>
+      <div class="trust-chips">
+        <span class="trust-chip">EVALUACIÓN</span>
+        <span class="trust-chip">CONVENIO LEGAL</span>
+        <span class="trust-chip">INVERSIÓN</span>
+        <span class="trust-chip">CONSTRUCCIÓN</span>
+        <span class="trust-chip">COMERCIALIZACIÓN</span>
+        <span class="trust-chip">ENTREGA DE UTILIDAD</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section bg-white">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-img-wrap rev from-l">
+        <div class="about-img-main">
+          <img
+            src="https://images.unsplash.com/photo-1506695041619-5dd4f46960b7?auto=format&fit=crop&w=800&q=80"
+            alt="Vista aérea de un terreno bien ubicado listo para desarrollo inmobiliario" loading="lazy">
+        </div>
+        <div class="about-accent">
+          <p class="a-num">100%</p>
+          <p class="a-lbl">Inversión por nuestra cuenta</p>
+        </div>
+      </div>
+      <div class="about-text rev">
+        <p class="eyebrow">Quiénes somos</p>
+        <h2 class="heading">Desarrollo Inmobiliario con Visión de Largo Plazo</h2>
+        <p>En Terrenos y Ladrillos nos dedicamos a la comercialización y desarrollo de inmuebles: construcción, compra y venta de propiedades, bajo un modelo de alianza justo y transparente con cada propietario.</p>
+        <p>Si tienes un terreno bien ubicado pero sin construir, nosotros ponemos el capital, la ejecución técnica y la comercialización. Tú conservas tu propiedad y recibes una utilidad mayor a la que obtendrías vendiéndolo hoy.</p>
+        <div class="about-stats">
+          <div class="a-stat">
+            <p class="a-stat-n" data-count="3" data-prefix="" data-suffix=""></p>
+            <p class="a-stat-l">Servicios integrales</p>
+          </div>
+          <div class="a-stat">
+            <p class="a-stat-n" data-count="100" data-prefix="" data-suffix="%"></p>
+            <p class="a-stat-l">Inversión por nuestra cuenta</p>
+          </div>
+          <div class="a-stat">
+            <p class="a-stat-n" data-count="0" data-prefix="" data-suffix="%"></p>
+            <p class="a-stat-l">Costo inicial para ti</p>
+          </div>
+          <div class="a-stat">
+            <p class="a-stat-n" data-count="100" data-prefix="" data-suffix="%"></p>
+            <p class="a-stat-l">Transparencia y seguridad legal</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section bg-off">
+  <div class="wrap">
+    <div class="section-head section-head--center">
+      <p class="eyebrow">Lo que hacemos</p>
+      <h2 class="heading">Servicios Integrales de Desarrollo Inmobiliario</h2>
+      <p class="sub">Acompañamos cada etapa del proyecto: desde la alianza con el propietario del terreno hasta la comercialización final del inmueble construido.</p>
+    </div>
+    <div class="svc-grid">
+
+      <div class="svc-card rev d1">
+        <span class="svc-num" aria-hidden="true">01</span>
+        <div class="svc-icon ic-blue">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+            <line x1="12" y1="22.08" x2="12" y2="12"/>
+          </svg>
+        </div>
+        <h3>Desarrollo en Asociación</h3>
+        <p>¿Tienes un terreno bien ubicado pero sin construir? Nos asociamos contigo, aportamos el 100% de la inversión y compartimos la utilidad del proyecto. Tú pones el terreno, nosotros el capital y la ejecución.</p>
+        <div class="svc-tags">
+          <span class="tag tag-b">Aportación de terreno</span>
+          <span class="tag tag-b">Inversión compartida</span>
+          <span class="tag tag-b">Cero riesgo</span>
+          <span class="tag tag-b">Utilidad garantizada</span>
+        </div>
+      </div>
+
+      <div class="svc-card rev d2">
+        <span class="svc-num" aria-hidden="true">02</span>
+        <div class="svc-icon ic-green">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8C6A2F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <h3>Construcción</h3>
+        <p>Desarrollamos y construimos el proyecto de principio a fin, con procesos técnicos certificados, control de calidad y cumplimiento de tiempos, maximizando el valor final del inmueble.</p>
+        <div class="svc-tags">
+          <span class="tag tag-g">Proyecto ejecutivo</span>
+          <span class="tag tag-g">Obra certificada</span>
+          <span class="tag tag-g">Control de calidad</span>
+        </div>
+      </div>
+
+      <div class="svc-card rev d3">
+        <span class="svc-num" aria-hidden="true">03</span>
+        <div class="svc-icon ic-slate">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4A4335" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+            <polyline points="17 6 23 6 23 12"/>
+          </svg>
+        </div>
+        <h3>Comercialización de Inmuebles</h3>
+        <p>Gestionamos la compra, venta y colocación del inmueble desarrollado, conectando tu propiedad con compradores e inversionistas calificados para maximizar su valor de venta.</p>
+        <div class="svc-tags">
+          <span class="tag">Compra y venta</span>
+          <span class="tag">Inversionistas calificados</span>
+          <span class="tag">Cierre seguro</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="section bg-white">
+  <div class="wrap">
+    <div class="prod-header">
+      <div>
+        <p class="eyebrow">Lo que buscamos</p>
+        <h2 class="heading">Terrenos que Convertimos en Oportunidad</h2>
+      </div>
+      <a href="#contact" class="btn-outline rev">Evalúa tu Terreno</a>
+    </div>
+    <div class="prod-grid">
+
+      <div class="prod-card rev d1">
+        <div class="p-icon ic-blue">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"/>
+            <path d="M3 9V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4"/>
+            <line x1="12" y1="3" x2="12" y2="21"/>
+          </svg>
+        </div>
+        <h3>Terreno Habitacional</h3>
+        <p>Lotes para desarrollo de vivienda unifamiliar o plurifamiliar.</p>
+        <span class="prod-pill">Uso Habitacional</span>
+      </div>
+
+      <div class="prod-card rev d2">
+        <div class="p-icon ic-green">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8C6A2F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.07 4.93l-1.41 1.41M6.34 17.66l-1.41 1.41M2 12H4M20 12h2M17.66 17.66l1.41 1.41M4.93 4.93l1.41 1.41"/>
+          </svg>
+        </div>
+        <h3>Terreno Comercial</h3>
+        <p>Predios en zonas de alto tráfico, ideales para plazas y locales.</p>
+        <span class="prod-pill">Uso Comercial</span>
+      </div>
+
+      <div class="prod-card rev d3">
+        <div class="p-icon ic-slate">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4A4335" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <h3>Uso Mixto</h3>
+        <p>Terrenos aptos para proyectos que combinan vivienda y comercio.</p>
+        <span class="prod-pill">Uso Mixto</span>
+      </div>
+
+      <div class="prod-card rev d4">
+        <div class="p-icon ic-blue">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="12" cy="12" r="3"/>
+            <line x1="12" y1="2" x2="12" y2="6"/>
+            <line x1="12" y1="18" x2="12" y2="22"/>
+          </svg>
+        </div>
+        <h3>Terreno Industrial</h3>
+        <p>Predios con potencial para naves y parques industriales.</p>
+        <span class="prod-pill">Uso Industrial</span>
+      </div>
+
+      <div class="prod-card rev d1">
+        <div class="p-icon ic-green">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8C6A2F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+          </svg>
+        </div>
+        <h3>Terreno Baldío</h3>
+        <p>Lotes sin construcción, listos para iniciar un proyecto desde cero.</p>
+        <span class="prod-pill">Sin Construir</span>
+      </div>
+
+      <div class="prod-card rev d2">
+        <div class="p-icon ic-slate">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4A4335" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+          </svg>
+        </div>
+        <h3>Construcción Parcial</h3>
+        <p>Inmuebles a medio construir con potencial de finalización y venta.</p>
+        <span class="prod-pill">Obra Gris</span>
+      </div>
+
+      <div class="prod-card rev d3">
+        <div class="p-icon ic-blue">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+            <line x1="6" y1="1" x2="6" y2="4"/>
+            <line x1="10" y1="1" x2="10" y2="4"/>
+            <line x1="14" y1="1" x2="14" y2="4"/>
+          </svg>
+        </div>
+        <h3>En Trámite Legal</h3>
+        <p>Terrenos con escrituración en proceso; te asesoramos en la regularización.</p>
+        <span class="prod-pill">Regularización</span>
+      </div>
+
+      <div class="prod-card rev d4">
+        <div class="p-icon ic-green">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8C6A2F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+          </svg>
+        </div>
+        <h3>Bien Ubicado</h3>
+        <p>Predios en zonas estratégicas con alta plusvalía y demanda.</p>
+        <span class="prod-pill">Alta Plusvalía</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why" class="section bg-navy">
+  <div class="wrap">
+    <div class="why-grid">
+      <div class="why-img-wrap rev from-r">
+        <div class="why-img-main">
+          <img
+            src="https://images.unsplash.com/photo-1516156008625-3a9d6067fab5?auto=format&fit=crop&w=800&q=80"
+            alt="Desarrollo residencial consolidado por Terrenos y Ladrillos" loading="lazy">
+        </div>
+        <div class="why-img-badge">
+          <p class="wib-n">0%</p>
+          <p class="wib-l">Costo inicial para ti</p>
+        </div>
+      </div>
+      <div class="why-content rev">
+        <p class="eyebrow eyebrow--white">Por qué elegirnos</p>
+        <h2 class="heading heading--white">La Confianza que tu Patrimonio Merece</h2>
+        <p class="sub sub--white">En Terrenos y Ladrillos convertimos tu terreno en una inversión rentable, con total transparencia legal y sin que tengas que arriesgar tu capital.</p>
+        <div class="benefit-list">
+          <div class="benefit">
+            <div class="ben-icon ben-icon-b">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E3C567" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <polyline points="9 12 11 14 15 10"/>
+              </svg>
+            </div>
+            <div>
+              <h4>Transparencia y Seguridad Legal</h4>
+              <p>Cada convenio se formaliza con respaldo jurídico completo. Revisamos, documentamos y protegemos tu propiedad en todo momento.</p>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="ben-icon ben-icon-g">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </div>
+            <div>
+              <h4>Inversión Total por Nuestra Cuenta</h4>
+              <p>Nosotros cubrimos el 100% del capital de construcción y desarrollo. Tú no arriesgas un solo peso de tu bolsillo.</p>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="ben-icon ben-icon-b">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E3C567" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+            </div>
+            <div>
+              <h4>Maximizamos la Utilidad de tu Propiedad</h4>
+              <p>Diseñamos el proyecto con enfoque comercial para elevar el valor de tu terreno y multiplicar tu retorno.</p>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="ben-icon ben-icon-w">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.65)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <div>
+              <h4>Equipo Técnico y Legal Experto</h4>
+              <p>Arquitectos, ingenieros y asesores legales te acompañan desde la evaluación del terreno hasta la entrega de utilidades.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NUMBERS -->
+<section id="numbers">
+  <div class="wrap">
+    <div class="numbers-grid">
+      <div class="number-item rev d1">
+        <p class="num-v" data-count="100" data-prefix="" data-suffix="%"></p>
+        <p class="num-l">Inversión cubierta por nosotros</p>
+      </div>
+      <div class="number-item rev d2">
+        <p class="num-v" data-count="0" data-prefix="" data-suffix="%"></p>
+        <p class="num-l">Costo inicial para el propietario</p>
+      </div>
+      <div class="number-item rev d3">
+        <p class="num-v" data-count="100" data-prefix="" data-suffix="%"></p>
+        <p class="num-l">Transparencia y respaldo legal</p>
+      </div>
+      <div class="number-item rev d4">
+        <p class="num-v" data-count="3" data-prefix="" data-suffix=""></p>
+        <p class="num-l">Pasos simples para empezar</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODELO DE ALIANZA -->
+<section id="brands">
+  <div class="wrap">
+    <div class="brands-head rev">
+      <p class="eyebrow eyebrow--white">Cómo Funciona</p>
+      <h2 class="heading heading--white">Nuestro Modelo de Alianza en 5 Pasos</h2>
+      <p class="brands-sub">Un proceso claro y transparente, de la evaluación de tu terreno hasta la entrega de tu utilidad.</p>
+    </div>
+    <div class="brands-grid">
+      <div class="brand-card rev d1">
+        <div class="brand-card-inner">
+          <p class="step-num">01</p>
+          <p class="step-label">Evaluación del Terreno</p>
+        </div>
+      </div>
+      <div class="brand-card rev d2">
+        <div class="brand-card-inner">
+          <p class="step-num">02</p>
+          <p class="step-label">Convenio Legal</p>
+        </div>
+      </div>
+      <div class="brand-card rev d3">
+        <div class="brand-card-inner">
+          <p class="step-num">03</p>
+          <p class="step-label">Inversión y Construcción</p>
+        </div>
+      </div>
+      <div class="brand-card rev d4">
+        <div class="brand-card-inner">
+          <p class="step-num">04</p>
+          <p class="step-label">Comercialización</p>
+        </div>
+      </div>
+      <div class="brand-card rev d5">
+        <div class="brand-card-inner">
+          <p class="step-num">05</p>
+          <p class="step-label">Entrega de tu Utilidad</p>
+        </div>
+      </div>
+    </div>
+    <p class="brands-note rev">Transparencia y seguridad legal en cada etapa del proyecto</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section bg-off">
+  <div class="wrap">
+    <div class="contact-grid">
+
+      <div class="contact-info rev from-l">
+        <p class="eyebrow">Contáctanos</p>
+        <h2 class="heading">Hablemos sobre tu Terreno o Proyecto</h2>
+        <p class="sub" style="margin-bottom:36px">Cuéntanos sobre tu propiedad o el tipo de inmueble que buscas. Un asesor te contactará para evaluar la mejor oportunidad de inversión.</p>
+        <div class="c-item">
+          <div class="c-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16.27z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="c-label">Teléfono</p>
+            <p class="c-value"><a href="tel:+523334896901">33 3489 6901</a></p>
+          </div>
+        </div>
+        <div class="c-item">
+          <div class="c-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <div>
+            <p class="c-label">Correo</p>
+            <p class="c-value"><a href="mailto:contacto@terrenosyladrillos.com">contacto@terrenosyladrillos.com</a></p>
+          </div>
+        </div>
+        <div class="c-item">
+          <div class="c-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div>
+            <p class="c-label">Ubicación</p>
+            <p class="c-value">Guadalajara, Jalisco</p>
+          </div>
+        </div>
+        <div class="c-item">
+          <div class="c-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <div>
+            <p class="c-label">Horario de atención</p>
+            <p class="c-value">Lunes a Viernes: 9:00 – 18:00<br>Sábado: 9:00 – 13:00</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rev">
+        <div class="form-wrap">
+          <h3>Solicita tu Evaluación Gratuita</h3>
+          <p class="form-sub">Te respondemos en menos de 24 horas hábiles.</p>
+          <form id="cForm" novalidate>
+            <div class="frow">
+              <div class="fg">
+                <label class="fl" for="fn">Nombre completo *</label>
+                <input class="fi" type="text" id="fn" name="nombre" placeholder="Su nombre completo" required autocomplete="name">
+              </div>
+              <div class="fg">
+                <label class="fl" for="fe">Empresa</label>
+                <input class="fi" type="text" id="fe" name="empresa" placeholder="Nombre de la empresa (opcional)" autocomplete="organization">
+              </div>
+            </div>
+            <div class="frow">
+              <div class="fg">
+                <label class="fl" for="ft">Teléfono *</label>
+                <input class="fi" type="tel" id="ft" name="telefono" placeholder="+52 33 0000 0000" required autocomplete="tel">
+              </div>
+              <div class="fg">
+                <label class="fl" for="fem">Correo electrónico</label>
+                <input class="fi" type="email" id="fem" name="email" placeholder="correo@empresa.com" autocomplete="email">
+              </div>
+            </div>
+            <div class="fg">
+              <label class="fl" for="fs">Tipo de solicitud *</label>
+              <select class="fi" id="fs" name="tipo" required>
+                <option value="">Seleccione el tipo de solicitud</option>
+                <option value="Tengo un terreno para desarrollar en asociación">Tengo un terreno para desarrollar en asociación</option>
+                <option value="Busco construir en mi propiedad">Busco construir en mi propiedad</option>
+                <option value="Quiero comprar un inmueble">Quiero comprar un inmueble</option>
+                <option value="Quiero vender un inmueble">Quiero vender un inmueble</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label class="fl" for="fm">Cuéntanos sobre tu terreno o proyecto *</label>
+              <textarea class="fi" id="fm" name="mensaje" rows="4" placeholder="Ubicación, tamaño del terreno o tipo de inmueble que buscas..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+              Enviar por WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">
+          <img src="img/logo.png" alt="Terrenos y Ladrillos" class="foot-logo-img">
+        </div>
+        <p class="foot-desc">Comercializamos y desarrollamos inmuebles de principio a fin: construcción, compra y venta, con transparencia y respaldo legal en cada proyecto.</p>
+      </div>
+      <div>
+        <p class="foot-col-title">Servicios</p>
+        <ul class="foot-links">
+          <li><a href="#services">Desarrollo en Asociación</a></li>
+          <li><a href="#services">Construcción</a></li>
+          <li><a href="#services">Comercialización de Inmuebles</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-col-title">Terrenos</p>
+        <ul class="foot-links">
+          <li><a href="#products">Terreno Habitacional</a></li>
+          <li><a href="#products">Terreno Comercial</a></li>
+          <li><a href="#products">Terreno Industrial</a></li>
+          <li><a href="#products">Ver todos los tipos</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-col-title">Contacto</p>
+        <ul class="foot-links">
+          <li><a href="tel:+523334896901">33 3489 6901</a></li>
+          <li><a href="mailto:contacto@terrenosyladrillos.com">contacto@terrenosyladrillos.com</a></li>
+          <li><a href="#contact">Solicitar Evaluación</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 <span>Terrenos y Ladrillos</span>. Todos los derechos reservados.</p>
+      <p>Guadalajara, Jalisco</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<div class="wa-float">
+  <span class="wa-tip">Escríbenos por WhatsApp</span>
+  <a href="https://wa.me/523334896901"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="wa-btn"
+     aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
+      <path fill="#fff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
