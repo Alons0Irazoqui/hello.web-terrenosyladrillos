@@ -169,7 +169,7 @@ nav.stuck .hamburger span { background: var(--navy); }
 }
 .hero-bg {
   position: absolute; inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1495107334309-fcf20504a5ab?auto=format&fit=crop&w=1920&q=80');
+  background-image: url('img/imagenes/obra-cimbra-escaleras.jpeg');
   background-size: cover;
   background-position: center 30%;
   z-index: 0;
@@ -731,7 +731,7 @@ nav.stuck .nav-logo-img { filter: brightness(0); }
 /* Grid */
 .brands-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 14px;
   position: relative; z-index: 1;
 }
@@ -820,16 +820,10 @@ nav.stuck .nav-logo-img { filter: brightness(0); }
 }
 
 /* Responsive */
-@media (max-width: 1100px) {
-  .brands-grid { grid-template-columns: repeat(4, 1fr); }
-}
 @media (max-width: 768px) {
-  .brands-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .brands-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .brand-card-inner { height: 88px; padding: 16px 14px; }
   .brand-card-inner img { max-height: 56px; }
-}
-@media (max-width: 480px) {
-  .brands-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 
