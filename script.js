@@ -281,7 +281,7 @@ document.getElementById('cForm').addEventListener('submit', function (e) {
   txt += '• Tipo de solicitud: ' + tipo    + '\n';
   txt += '• Detalles: '      + mensaje;
 
-  window.open('https://wa.me/523334896901?text=' + encodeURIComponent(txt), '_blank');
+  window.open('https://wa.me/523311198738?text=' + encodeURIComponent(txt), '_blank');
 });
 
 /* ═══════════════════════════════
